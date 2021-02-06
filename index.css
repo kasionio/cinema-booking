@@ -157,7 +157,7 @@ body {
 
 .poster-container {
 	width: 33%;
-	height: calc(100vh - 100px);
+	height: auto;
 	opacity: 0.8;
 }
 
