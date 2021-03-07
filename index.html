@@ -6,7 +6,7 @@
       <link rel="stylesheet" type="text/css" href="index.css">
       <title>Cinema booking</title>
    </head>
-   <body class="body">
+   <body class="body">    
       <header class="header">
          <h1 class="header_main">Sex education</h1>
       </header>
@@ -21,6 +21,7 @@
                      <path d="M10 60 Q 160 10 310 60" stroke="#cfcfcf" fill="transparent" stroke-width="24"/>
                      <text x="128" y="40" class="screen_text" fill="white">Screen</text>
                   </svg>
+                  <form id="form" action="#">
                   <div class="seats" id='row-1'>
                      <input class="seat visually-hidden" type="checkbox" name="seat" id='seat-1_1' value="1-1">
                      <label for="seat-1_1" class="label"></label>
@@ -113,6 +114,7 @@
                      <input class="seat visually-hidden" type="checkbox" name="seat" id='seat-6_5' value="6-5">
                      <label for="seat-6_5" class="label comfort"></label>
                   </div>
+               </form>
                </fieldset>
                <section class="legend">
                   <header>
@@ -127,13 +129,19 @@
                      <span class="legend-item" id="selected">Selected</span>
                   </div>
                </section>
-               <section class="price">
-                  <p class="price-item">Selected: row 3, place 5</p>
-                  <p class="price-item">Total amount: 22$</p>
+               <section>
+                     <h3>Selected: </h3>
+                     <p class="place" id="place">
+                     </p>
                </section>
-                <form class="submit"  action="">
-                  <input class="submit-button" type="submit" value="Proceed to payment">
-                </form>              
+               <section class="price">
+                  <p class="price-item">Total amount: 
+                     <span id='total-price'>0</span>$
+                  </p>
+               </section>
+                <div class="submit">
+                  <input class="submit-button" id="paymentButton" type="submit" value="Proceed to payment">
+                </div>              
                </article>
             </div>
       </main>
@@ -147,5 +155,6 @@
             <p>2021 Cinema booking site</p>
          </div>
       </footer>
+      <script src="index.js"></script>
    </body>
 </html>
